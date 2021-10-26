@@ -378,116 +378,143 @@ public class Main {
 
         //1uzduotis
 
-        int[] randomNum = new int[30];
-        for (int i=0; i< randomNum.length; i++){
-            randomNum[i] = 5 + (int) (Math.random() * ((25 - 5) + 1));
+//        int[] randomNum = new int[30];
+//        for (int i=0; i< randomNum.length; i++){
+//            randomNum[i] = 5 + (int) (Math.random() * ((25 - 5) + 1));
+//        }
+//        for (int i = 0; i < randomNum.length; i++) {
+//            System.out.print(randomNum[i] + " ");
+//        }
+//        System.out.println();
+//
+//        //2uzduotis
+//
+//        //a dalis
+//        int biggerThanTen = 0;
+//        for (int i = 0; i < randomNum.length; i++) {
+//            if (randomNum[i] > 10){
+//              biggerThanTen++;
+//            }
+//        }
+//        System.out.println("Didesniu uz 10 skaiciu yra: "+ biggerThanTen);
+//
+//        //b dalis   REIKIA FIXINT, nes gali kartotis max reiksme
+//        int biggestValue = 0;
+//        int biggestIndex = 0;
+//        for (int i = 0; i < randomNum.length; i++) {
+//            if ( randomNum[i] > biggestValue){
+//                biggestValue = randomNum[i];
+//                biggestIndex = i;
+//            }
+//        }
+//        System.out.println("Didziausia reiksme: " + biggestValue + " jos indeksas: " + biggestIndex);
+//
+//
+//        //c dalis
+//        int sumEven = 0;
+//        for (int i = 0; i < randomNum.length; i++) {
+//            if (i % 2 ==0){
+//                sumEven += randomNum[i];
+//            }
+//        }
+//        System.out.println("Lyginiu indexu reiksmiu suma: " + sumEven);
+//
+//        //d dalis
+//        int[] randomNumD = new int[30];
+//        for (int i = 0; i < randomNum.length; i++) {
+//            randomNumD[i]= randomNum[i] - i;
+//        }
+//        System.out.println("Masyvas perdarytas d daliai: ");
+//        for (int i = 0; i < randomNumD.length; i++) {
+//            System.out.print(randomNumD[i] + " ");
+//        }
+//
+//        //e dalis
+//        int[] randomNumE = new int[40];
+//        for (int i = 0; i < randomNumE.length; i++) {
+//            if(i< randomNum.length){
+//                randomNumE[i] = randomNum[i];
+//            }else{
+//                randomNumE[i] = 5 + (int) (Math.random() * ((25 - 5) + 1));
+//            }
+//        }
+//        randomNum = randomNumE;
+//        System.out.println();
+//        for (int i = 0; i < randomNum.length; i++) {
+//            System.out.print(randomNum[i] + " ");
+//        }
+//
+//        //f dalis
+//        int[] evenIndex = new int[20];
+//        int[] oddIndex = new int[20];
+//        int j =0;
+//        int k = 0;
+//        for (int i = 0; i < randomNum.length; i++) {
+//            if(i % 2 ==0){
+//                evenIndex[j++] = randomNum[i];
+//            }else{
+//                oddIndex[k++] = randomNum[i];
+//            }
+//        }
+//        System.out.println();
+//        System.out.println("Lyginiu indexu reiksmes: ");
+//        for (int i = 0; i < evenIndex.length; i++) {
+//            System.out.print(evenIndex[i] + " ");
+//        }
+//        System.out.println();
+//        System.out.println("Nelyginiu indexu reiksmes: ");
+//        for (int i = 0; i < evenIndex.length; i++) {
+//            System.out.print(oddIndex[i] + " ");
+//        }
+//
+//        //g dalis
+//        for (int i = 0; i < evenIndex.length; i++) {
+//            if(evenIndex[i] > 15){
+//                evenIndex[i] = 0;
+//            }
+//        }
+//        System.out.println();
+//        for (int i = 0; i < evenIndex.length; i++) {
+//            System.out.print(evenIndex[i] + " ");
+//        }
+//
+//        //h dalis
+//        int hIndex = 0;
+//        for (int i = 0; i < randomNum.length; i++) {
+//            if (randomNum[i] > 10){
+//                hIndex = i;
+//                break;
+//            }
+//        }
+//        System.out.println();
+//        System.out.println("Pirmo didesnio uz 10 indexas yra: " + hIndex);
+//
+//
+        //3 uzduotis
+        char[] letterArr = new char[200];
+        for (int i = 0; i < 200; i++) {
+            char uppercaseChar = (char) ((int)(Math.random()*100)%4+65);
+            letterArr[i] = uppercaseChar;
         }
-        for (int i = 0; i < randomNum.length; i++) {
-            System.out.print(randomNum[i] + " ");
-        }
-        System.out.println();
-
-        //2uzduotis
-
-        //a dalis
-        int biggerThanTen = 0;
-        for (int i = 0; i < randomNum.length; i++) {
-            if (randomNum[i] > 10){
-              biggerThanTen++;
+        int countA = 0;
+        int countB = 0;
+        int countC = 0;
+        int countD = 0;
+        for (int i = 0; i < letterArr.length; i++) {
+            if (letterArr[i] == 'A'){
+                countA++;
+            }
+            if (letterArr[i] == 'B'){
+                countB++;
+            }
+            if (letterArr[i] == 'C'){
+                countC++;
+            }
+            if (letterArr[i] == 'D'){
+                countD++;
             }
         }
-        System.out.println("Didesniu uz 10 skaiciu yra: "+ biggerThanTen);
-
-        //b dalis   REIKIA FIXINT, nes gali kartotis max reiksme
-        int biggestValue = 0;
-        int biggestIndex = 0;
-        for (int i = 0; i < randomNum.length; i++) {
-            if ( randomNum[i] > biggestValue){
-                biggestValue = randomNum[i];
-                biggestIndex = i;
-            }
-        }
-        System.out.println("Didziausia reiksme: " + biggestValue + " jos indeksas: " + biggestIndex);
-
-
-        //c dalis
-        int sumEven = 0;
-        for (int i = 0; i < randomNum.length; i++) {
-            if (i % 2 ==0){
-                sumEven += randomNum[i];
-            }
-        }
-        System.out.println("Lyginiu indexu reiksmiu suma: " + sumEven);
-
-        //d dalis
-        int[] randomNumD = new int[30];
-        for (int i = 0; i < randomNum.length; i++) {
-            randomNumD[i]= randomNum[i] - i;
-        }
-        System.out.println("Masyvas perdarytas d daliai: ");
-        for (int i = 0; i < randomNumD.length; i++) {
-            System.out.print(randomNumD[i] + " ");
-        }
-
-        //e dalis
-        int[] randomNumE = new int[40];
-        for (int i = 0; i < randomNumE.length; i++) {
-            if(i< randomNum.length){
-                randomNumE[i] = randomNum[i];
-            }else{
-                randomNumE[i] = 5 + (int) (Math.random() * ((25 - 5) + 1));
-            }
-        }
-        randomNum = randomNumE;
-        System.out.println();
-        for (int i = 0; i < randomNum.length; i++) {
-            System.out.print(randomNum[i] + " ");
-        }
-
-        //f dalis
-        int[] evenIndex = new int[20];
-        int[] oddIndex = new int[20];
-        int j =0;
-        int k = 0;
-        for (int i = 0; i < randomNum.length; i++) {
-            if(i % 2 ==0){
-                evenIndex[j++] = randomNum[i];
-            }else{
-                oddIndex[k++] = randomNum[i];
-            }
-        }
-        System.out.println();
-        System.out.println("Lyginiu indexu reiksmes: ");
-        for (int i = 0; i < evenIndex.length; i++) {
-            System.out.print(evenIndex[i] + " ");
-        }
-        System.out.println();
-        System.out.println("Nelyginiu indexu reiksmes: ");
-        for (int i = 0; i < evenIndex.length; i++) {
-            System.out.print(oddIndex[i] + " ");
-        }
-
-        //g dalis
-        for (int i = 0; i < evenIndex.length; i++) {
-            if(evenIndex[i] > 15){
-                evenIndex[i] = 0;
-            }
-        }
-        System.out.println();
-        for (int i = 0; i < evenIndex.length; i++) {
-            System.out.print(evenIndex[i] + " ");
-        }
-
-        //h dalis
-        int hIndex = 0;
-        for (int i = 0; i < randomNum.length; i++) {
-            if (randomNum[i] > 10){
-                hIndex = i;
-                break;
-            }
-        }
-        System.out.println();
-        System.out.println("Pirmo didesnio uz 10 indexas yra: " + hIndex);
+        System.out.println("A raidziu yra: " + countA + ", B raidziu yra: " + countB + ", C raidziu yra: " + countC + ", D raidziu yra: " + countD);
 
 
 
