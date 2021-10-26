@@ -424,7 +424,76 @@ public class Main {
         for (int i = 0; i < randomNum.length; i++) {
             randomNumD[i]= randomNum[i] - i;
         }
-        System.out.println("Masyvas");
+        System.out.println("Masyvas perdarytas d daliai: ");
+        for (int i = 0; i < randomNumD.length; i++) {
+            System.out.print(randomNumD[i] + " ");
+        }
+
+        //e dalis
+        int[] randomNumE = new int[40];
+        for (int i = 0; i < randomNumE.length; i++) {
+            if(i< randomNum.length){
+                randomNumE[i] = randomNum[i];
+            }else{
+                randomNumE[i] = 5 + (int) (Math.random() * ((25 - 5) + 1));
+            }
+        }
+        randomNum = randomNumE;
+        System.out.println();
+        for (int i = 0; i < randomNum.length; i++) {
+            System.out.print(randomNum[i] + " ");
+        }
+
+        //f dalis
+        int[] evenIndex = new int[20];
+        int[] oddIndex = new int[20];
+        int j =0;
+        int k = 0;
+        for (int i = 0; i < randomNum.length; i++) {
+            if(i % 2 ==0){
+                evenIndex[j++] = randomNum[i];
+            }else{
+                oddIndex[k++] = randomNum[i];
+            }
+        }
+        System.out.println();
+        System.out.println("Lyginiu indexu reiksmes: ");
+        for (int i = 0; i < evenIndex.length; i++) {
+            System.out.print(evenIndex[i] + " ");
+        }
+        System.out.println();
+        System.out.println("Nelyginiu indexu reiksmes: ");
+        for (int i = 0; i < evenIndex.length; i++) {
+            System.out.print(oddIndex[i] + " ");
+        }
+
+        //g dalis
+        for (int i = 0; i < evenIndex.length; i++) {
+            if(evenIndex[i] > 15){
+                evenIndex[i] = 0;
+            }
+        }
+        System.out.println();
+        for (int i = 0; i < evenIndex.length; i++) {
+            System.out.print(evenIndex[i] + " ");
+        }
+
+        //h dalis
+        int hIndex = 0;
+        for (int i = 0; i < randomNum.length; i++) {
+            if (randomNum[i] > 10){
+                hIndex = i;
+                break;
+            }
+        }
+        System.out.println();
+        System.out.println("Pirmo didesnio uz 10 indexas yra: " + hIndex);
+
+
+
+
+
+
 
 
 
