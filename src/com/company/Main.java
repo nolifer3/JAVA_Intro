@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Arrays;
 import java.util.Locale;
 
 public class Main {
@@ -516,6 +517,14 @@ public class Main {
         }
         System.out.println("A raidziu yra: " + countA + ", B raidziu yra: " + countB + ", C raidziu yra: " + countC + ", D raidziu yra: " + countD);
 
+        //4 uzduotis
+        char[] letterArr4 = new char[200];
+        Arrays.sort(letterArr);
+        letterArr4 = letterArr;
+        System.out.println();
+        for (int i = 0; i < letterArr4.length; i++) {
+            System.out.print(letterArr4[i] + " ");
+        }
 
 
 
